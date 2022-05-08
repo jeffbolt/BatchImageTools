@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32002.261
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32417.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchImageTools", "BatchImageTools\BatchImageTools.csproj", "{63FBB587-97B2-45B6-90C5-0F65A2F31E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools", "ImageTools\ImageTools.csproj", "{B8B4C142-A335-48C8-BA5E-C20F9440EC66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{63FBB587-97B2-45B6-90C5-0F65A2F31E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63FBB587-97B2-45B6-90C5-0F65A2F31E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63FBB587-97B2-45B6-90C5-0F65A2F31E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B4C142-A335-48C8-BA5E-C20F9440EC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B4C142-A335-48C8-BA5E-C20F9440EC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B4C142-A335-48C8-BA5E-C20F9440EC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B4C142-A335-48C8-BA5E-C20F9440EC66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

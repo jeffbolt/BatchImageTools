@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BatchImageTools
@@ -59,6 +58,15 @@ namespace BatchImageTools
 						if (File.Exists(filePath))
 						{
 							var fi = new FileInfo(filePath);
+							Icon icon = ShellIcon.GetSmallIcon(filePath);
+							string imageKey = icon.Handle.ToString();
+							SmallIcons.Images.Add(imageKey, icon);
+
+							//Bitmap bmp = icon.ToBitmap();
+							//if (SmallIcons.Images.Contains(bmp))
+							//{
+							//	imageKey = SmallIcons.Images.;
+							//}
 
 							switch (fi.Extension.ToLower())
 							{
@@ -71,7 +79,8 @@ namespace BatchImageTools
 										{
 											var item = new ListViewItem
 											{
-												Text = filePath
+												Text = filePath,
+												ImageKey = imageKey
 											};
 											item.SubItems.Add(svg.Height.ToString() + " px");
 											item.SubItems.Add(svg.Width.ToString() + " px");
@@ -93,7 +102,8 @@ namespace BatchImageTools
 										{
 											var item = new ListViewItem
 											{
-												Text = filePath
+												Text = filePath,
+												ImageKey = imageKey
 											};
 											item.SubItems.Add(bmp.Height.ToString("N0") + " px");
 											item.SubItems.Add(bmp.Width.ToString("N0") + " px");

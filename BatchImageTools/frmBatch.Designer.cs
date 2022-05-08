@@ -29,16 +29,19 @@ namespace BatchImageTools
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblTitle = new System.Windows.Forms.Label();
 			this.lblSelect = new System.Windows.Forms.Label();
 			this.lvwImages = new System.Windows.Forms.ListView();
-			this.lblConvertTo = new System.Windows.Forms.Label();
-			this.cmbFormat = new System.Windows.Forms.ComboBox();
 			this.Path = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Height = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Width = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.lblConvertTo = new System.Windows.Forms.Label();
+			this.cmbFormat = new System.Windows.Forms.ComboBox();
 			this.btnConvert = new System.Windows.Forms.Button();
+			this.SmallIcons = new System.Windows.Forms.ImageList(this.components);
+			this.LargeIcons = new System.Windows.Forms.ImageList(this.components);
 			this.SuspendLayout();
 			// 
 			// lblTitle
@@ -73,12 +76,34 @@ namespace BatchImageTools
             this.Size});
 			this.lvwImages.FullRowSelect = true;
 			this.lvwImages.HideSelection = false;
+			this.lvwImages.LargeImageList = this.LargeIcons;
 			this.lvwImages.Location = new System.Drawing.Point(17, 63);
 			this.lvwImages.Name = "lvwImages";
 			this.lvwImages.Size = new System.Drawing.Size(771, 341);
+			this.lvwImages.SmallImageList = this.SmallIcons;
 			this.lvwImages.TabIndex = 2;
 			this.lvwImages.UseCompatibleStateImageBehavior = false;
 			this.lvwImages.View = System.Windows.Forms.View.Details;
+			// 
+			// Path
+			// 
+			this.Path.Text = "File Path";
+			this.Path.Width = 400;
+			// 
+			// Height
+			// 
+			this.Height.Text = "Height";
+			this.Height.Width = 100;
+			// 
+			// Width
+			// 
+			this.Width.Text = "Width";
+			this.Width.Width = 100;
+			// 
+			// Size
+			// 
+			this.Size.Text = "Size";
+			this.Size.Width = 100;
 			// 
 			// lblConvertTo
 			// 
@@ -109,26 +134,6 @@ namespace BatchImageTools
 			this.cmbFormat.Size = new System.Drawing.Size(289, 21);
 			this.cmbFormat.TabIndex = 4;
 			// 
-			// Path
-			// 
-			this.Path.Text = "File Path";
-			this.Path.Width = 400;
-			// 
-			// Size
-			// 
-			this.Size.Text = "Size";
-			this.Size.Width = 100;
-			// 
-			// Height
-			// 
-			this.Height.Text = "Height";
-			this.Height.Width = 100;
-			// 
-			// Width
-			// 
-			this.Width.Text = "Width";
-			this.Width.Width = 100;
-			// 
 			// btnConvert
 			// 
 			this.btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -140,6 +145,18 @@ namespace BatchImageTools
 			this.btnConvert.Text = "Convert";
 			this.btnConvert.UseVisualStyleBackColor = true;
 			this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+			// 
+			// SmallIcons
+			// 
+			this.SmallIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+			this.SmallIcons.ImageSize = new System.Drawing.Size(16, 16);
+			this.SmallIcons.TransparentColor = System.Drawing.Color.Transparent;
+			// 
+			// LargeIcons
+			// 
+			this.LargeIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+			this.LargeIcons.ImageSize = new System.Drawing.Size(32, 32);
+			this.LargeIcons.TransparentColor = System.Drawing.Color.Transparent;
 			// 
 			// frmBatch
 			// 
@@ -175,6 +192,8 @@ namespace BatchImageTools
 		private System.Windows.Forms.ColumnHeader Width;
 		private System.Windows.Forms.ColumnHeader Size;
 		private System.Windows.Forms.Button btnConvert;
+		private System.Windows.Forms.ImageList SmallIcons;
+		private System.Windows.Forms.ImageList LargeIcons;
 	}
 }
 
